@@ -8,7 +8,7 @@
 
 using namespace std;
 
-const char *INPUT_FILE_NAME = "bisonsearchin.txt";
+const char *INPUT_FILE_NAME = "01bisonsearchin.txt";
 const char *OUTPUT_FILE_NAME = "bisonfoundin.txt";
 
 int main()
