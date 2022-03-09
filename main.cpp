@@ -27,7 +27,6 @@ int main(int argc, char** argv)
     input = argv[1] + INPUT_FILE_NAME;
     output = argv[1] + OUTPUT_FILE_NAME;
 
-
     ifstream infile;
     infile.open(input);
     ofstream outfile;
