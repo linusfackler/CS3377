@@ -9,7 +9,7 @@
 using namespace std;
 
 
-int main(int argc)
+int main(int argc, char** argv)
 {
     cout.imbue(locale(""));
 
@@ -24,17 +24,8 @@ int main(int argc)
     string input;
     string output;
 
-    if (argc < 10)
-    {
-        input = '0' + to_string(argc) + INPUT_FILE_NAME;
-        output = '0' + to_string(argc) + OUTPUT_FILE_NAME;
-    }
-
-    else
-    {
-        input = to_string(argc) + INPUT_FILE_NAME;
-        output = to_string(argc) + OUTPUT_FILE_NAME;
-    }
+    input = argv[1] + INPUT_FILE_NAME;
+    output = argv[1] + OUTPUT_FILE_NAME;
 
 
     ifstream infile;
@@ -58,9 +49,9 @@ int main(int argc)
     
     clock_gettime(CLOCK_MONOTONIC, &startTime);
 
-    for (unsigned i = 1, size = searchBisonInGrass.size(); i < size; i++)
+    for (int i = 1, size = searchBisonInGrass.size(); i < size; i++)
     {
-        if (searchBisonInGrass[i - 1] == ')' && searchBisonInGrass[i] == 'i')
+        if (searchBisonInGrass[i - 1] == ')' && searchBisonInGrass[i] == ')')
             answerFoundBisonPattern += backParenCount;
 
         else if (searchBisonInGrass[i - 1] == '(' && searchBisonInGrass[i] == '(')
@@ -71,6 +62,8 @@ int main(int argc)
 
     elapsedTime = BILLION * (endTime.tv_sec - startTime.tv_sec) + endTime.tv_nsec - startTime.tv_nsec;
 
+    cout << "Testcase " << argv[1] << " successfully finished." << endl;
+    cout << "Results in " << output << endl; 
     cout << "elapsed time = " << (long long unsigned int) elapsedTime << " nanoseconds" << endl;
 
     outfile << answerFoundBisonPattern << endl;
