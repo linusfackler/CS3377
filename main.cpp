@@ -8,20 +8,39 @@
 
 using namespace std;
 
-const char *INPUT_FILE_NAME = "01bisonsearchin.txt";
-const char *OUTPUT_FILE_NAME = "bisonfoundin.txt";
 
-int main()
+int main(int argc)
 {
     cout.imbue(locale(""));
+
+    string INPUT_FILE_NAME = "bisonsearchin.txt";
+    string OUTPUT_FILE_NAME = "bisonfoundin.txt";
 
     const long          BILLION = 1000000000L;
     uint64_t            elapsedTime;
     struct timespec     startTime, endTime;
     string              searchBisonInGrass;
 
-    ifstream infile (INPUT_FILE_NAME);
-    ofstream outfile (OUTPUT_FILE_NAME);
+    string input;
+    string output;
+
+    if (argc < 10)
+    {
+        input = '0' + to_string(argc) + INPUT_FILE_NAME;
+        output = '0' + to_string(argc) + OUTPUT_FILE_NAME;
+    }
+
+    else
+    {
+        input = to_string(argc) + INPUT_FILE_NAME;
+        output = to_string(argc) + OUTPUT_FILE_NAME;
+    }
+
+
+    ifstream infile;
+    infile.open(input);
+    ofstream outfile;
+    outfile.open(output);
 
     if (infile.fail())
     {
@@ -57,6 +76,8 @@ int main()
     outfile << answerFoundBisonPattern << endl;
 
     outfile.close();
+
+    
 
     return EXIT_SUCCESS;
 }
