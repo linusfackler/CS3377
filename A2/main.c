@@ -1,10 +1,15 @@
-// #include <iostream>
-// #include <string>
-// #include <fstream>
 #include <unistd.h>
 #include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 #define LINESIZE 16
+#include <string.h>
+#include <iomanip>
+#include <iostream>
+
+using namespace std;
 
 int main (int argc, char* argv[])
 {
@@ -32,7 +37,38 @@ int main (int argc, char* argv[])
         cout << "length " << length << endl;
         cout << endl;
         int position;
-        cout << "blockCount "
+        cout << "blockCount " << blockcount << endl;
+
+        for (int line = 0; line < LINESIZE; line++)
+        {
+            cout << setw(2) << line << " : ";
+            for (int column = 0; column < LINESIZE; column++)
+            {
+                position = lseek(fd, 0, SEEK_CUR);
+                cout << setw(04) << position ++ space << " ";
+                write(fd, &space, 1);
+            } 
+            cout << endl;
+        }
+
+        cout << endl << endl;
+
+        int argvlength = strlen(argv[argNo]);
+        cout << "argNo       " << argNo         << endl;
+        cout << "argv[argNo] " << argv[argNo]   << endl;
+        cout << "argvlength  " << argvlength    << endl;
+        cout << "blockCount  " << blockdount    << endl;
+
+        // odd left to right
+        if (argNo % 2 != 0)
+        {
+            for (int i = 0; i < argvlength; i++)
+            {
+                cout << "lseek" << setw(06) << (blockcount + )
+            }
+        }
+
+
 
     }
 }
