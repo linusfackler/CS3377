@@ -1,0 +1,8 @@
+#!
+echo "Enter your name:"
+read username
+touch $$.name
+echo $username > $$.name
+cat $$.name
+#this script promps the user for their name and prints it to a file with the name of PID.name
+#where PID is the process ID number

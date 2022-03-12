@@ -1,0 +1,3 @@
+#!
+echo $1
+#This script displays the first argument on the command line it is called with

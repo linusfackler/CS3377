@@ -1,0 +1,5 @@
+#!
+date
+echo $HOME
+echo $PATH
+#this script displays the current date and time, the value of HOME and PATH

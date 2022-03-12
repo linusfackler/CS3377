@@ -1,0 +1,6 @@
+#!
+echo $0
+echo $#
+echo $*
+#this script displays the name of the calling program, the number of positional parameters,
+#and a list of positional parameters

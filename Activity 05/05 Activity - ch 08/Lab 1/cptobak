@@ -1,0 +1,4 @@
+#!
+cp "$1" "$1".bak
+#this script copies an existing file that is the first argument of the command when this script is called.
+#it creates a copy of the file with the same name but adds a .bak at the end

@@ -1,0 +1,5 @@
+#!
+echo "Enter your name:"
+read username
+echo Hello $username
+#this script promps the user for their name and displays it with a "Hello" before it

@@ -1,0 +1,6 @@
+#!
+for n in {1..$#}
+do
+   echo $n
+done
+#this script does the same as looper, but instead uses the for..in control structure
