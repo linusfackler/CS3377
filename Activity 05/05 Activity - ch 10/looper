@@ -1,7 +1,0 @@
-#!
-for n in "$@"
-do
-   echo $n
-done
-#this script loops through the command-line arguments
-#and displays each argument on a seperate line

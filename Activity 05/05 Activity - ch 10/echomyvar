@@ -1,3 +1,0 @@
-#!
-echo The PID of this process is $$
-echo The value of myvar is: $myvar

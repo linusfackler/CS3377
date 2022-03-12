@@ -1,265 +1,0 @@
-Script started on Fri 28 Jan 2022 05:01:06 PM CST
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001[?1034h{cslinux1:~} cim [K[K[K[Kvim practice
-[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;33r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[33;1H"practice" [New File][>c[2;1H[1m[34m~                                                                                                                               [3;1H~                                                                                                                               [4;1H~                                                                                                                               [5;1H~                                                                                                                               [6;1H~                                                                                                                               [7;1H~                                                                                                                               [8;1H~                                                                                                                               [9;1H~                                                                                                                               [10;1H~                                                                                                                               [11;1H~                                                                                                                               [12;1H~                                                                                                                               [13;1H~                                                                                                                               [14;1H~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [30;1H~                                                                                                                               [31;1H~                                                                                                                               [32;1H~                                                                                                                               [m[33;111H0,0-1[9CAll[1;1H[?12l[?25h[?25l[33;1H[1m-- INSERT --[m[33;13H[K[33;111H0,1[11CAll[1;1H[?12l[?25h[?25lC[33;111H1,2[1;2H[?12l[?25h[?25lS[33;113H3[1;3H[?12l[?25h[?25l3[33;113H4[1;4H[?12l[?25h[?25l3[33;113H5[1;5H[?12l[?25h[?25l7[33;113H6[1;6H[?12l[?25h[?25l7[33;113H7[1;7H[?12l[?25h[?25l[2;1H[K[33;111H2,1[2;1H[?12l[?25h[?25lL[33;113H2[2;2H[?12l[?25h[?25li[33;113H3[2;3H[?12l[?25h[?25ln[33;113H4[2;4H[?12l[?25h[?25lu[33;113H5[2;5H[?12l[?25h[?25ls[33;113H6[2;6H[?12l[?25h[?25l[33;113H7[2;7H[?12l[?25h[?25lF[33;113H8[2;8H[?12l[?25h[?25la[33;113H9[2;9H[?12l[?25h[?25lc[33;113H10[2;10H[?12l[?25h[?25lk[33;114H1[2;11H[?12l[?25h[?25ll[33;114H2[2;12H[?12l[?25h[?25le[33;114H3[2;13H[?12l[?25h[?25lr[33;114H4[2;14H[?12l[?25h[?25l[3;1H[K[33;111H3,1 [3;1H[?12l[?25h[?25lS[33;113H2[3;2H[?12l[?25h[?25lp[33;113H3[3;3H[?12l[?25h[?25lr[33;113H4[3;4H[?12l[?25h[?25li[33;113H5[3;5H[?12l[?25h[?25ln[33;113H6[3;6H[?12l[?25h[?25lg[33;113H7[3;7H[?12l[?25h[?25l[33;113H8[3;8H[?12l[?25h[?25l2[33;113H9[3;9H[?12l[?25h[?25l0[33;113H10[3;10H[?12l[?25h[?25l2[33;114H1[3;11H[?12l[?25h[?25l2[33;114H2[3;12H[?12l[?25h[?25l[4;1H[K[33;111H4,1 [4;1H[?12l[?25h[?25lS[33;113H2[4;2H[?12l[?25h[?25ly[33;113H3[4;3H[?12l[?25h[?25ls[33;113H4[4;4H[?12l[?25h[?25lt[33;113H5[4;5H[?12l[?25h[?25le[33;113H6[4;6H[?12l[?25h[?25lm[33;113H7[4;7H[?12l[?25h[?25l[33;113H8[4;8H[?12l[?25h[?25lp[33;113H9[4;9H[?12l[?25h[?25lr[33;113H10[4;10H[?12l[?25h[?25lo[33;114H1[4;11H[?12l[?25h[?25lg[33;114H2[4;12H[?12l[?25h[?25la[33;114H3[4;13H[?12l[?25h[?25lm[33;114H4[4;14H[?12l[?25h[?25lm[33;114H5[4;15H[?12l[?25h[?25li[33;114H6[4;16H[?12l[?25h[?25ln[33;114H7[4;17H[?12l[?25h[?25lg[33;114H8[4;18H[?12l[?25h[33;1H[K[4;17H[?25l[33;111H4,17[10CAll[4;17H[?12l[?25h[?25l[33;1H"practice"[33;111H[K[33;12H[New] 4L, 51C written
-[?1l>[?12l[?25h[?1049l]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} ls
-perl5  practice  public_html  typescript
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} ls practice
-practice
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} ls practice xxxx
-ls: cannot access xxxx: No such file or directory
-practice
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} cat practice
-CS3377
-Linus Fackler
-Spring 2022
-System progamming
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} cp practice practice_cpy[K[Kopy
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} ls
-perl5  practice  practice_copy	public_html  typescript
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} rm prat[Kctice
-rm: remove regular file ‘practice’? y
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} ls
-perl5  practice_copy  public_html  typescript
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} ls practice
-ls: cannot access practice: No such file or directory
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} l[Kcat practice
-cat: practice: No such file or directory
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} ls practice_copy
-practice_copy
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} cat practice_copy
-CS3377
-Linus Fackler
-Spring 2022
-System progamming
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} ls
-perl5  practice_copy  public_html  typescript
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} less practice_copy
-[?1049h[?1h=CS3377
-Linus Fackler
-Spring 2022
-System progamming
-[7mpractice_copy (END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K [KESCESC[Kqq[K[7m(END)[27m[K[K[?1l>[?1049l]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} ls /ec[Ktc/services
-/etc/services
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} less /[K[K[K[K[K[Kls /etc/services[C[1@l[1@e[1@s[1@s[1P[1P /etc/services
-[?1049h[?1h=# /etc/services:
-# $Id: services,v 1.55 2013/04/14 ovasik Exp $
-#
-# Network services, Internet style
-# IANA services version: last updated 2013-04-10
-#
-# Note that it is presently the policy of IANA to assign a single well-known
-# port number for both TCP and UDP; hence, most entries here have two entries
-# even if the protocol doesn't support UDP operations.
-# Updated from RFC 1700, ``Assigned Numbers'' (October 1994).  Not all ports
-# are included, only the more common ones.
-#
-# The latest IANA port assignments can be gotten from
-#       http://www.iana.org/assignments/port-numbers
-# The Well Known Ports are those from 0 through 1023.
-# The Registered Ports are those from 1024 through 49151
-# The Dynamic and/or Private Ports are those from 49152 through 65535
-#
-# Each line describes one service, and is of the form:
-#
-# service-name  port/protocol  [aliases ...]   [# comment]
-
-tcpmux          1/tcp                           # TCP port service multiplexer
-tcpmux          1/udp                           # TCP port service multiplexer
-rje             5/tcp                           # Remote Job Entry
-rje             5/udp                           # Remote Job Entry
-echo            7/tcp
-echo            7/udp
-discard         9/tcp           sink null
-discard         9/udp           sink null
-systat          11/tcp          users
-systat          11/udp          users
-[7m/etc/services[27m[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K[?1l>[?1049l]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} less /etc/services
-[?1049h[?1h=# /etc/services:
-# $Id: services,v 1.55 2013/04/14 ovasik Exp $
-#
-# Network services, Internet style
-# IANA services version: last updated 2013-04-10
-#
-# Note that it is presently the policy of IANA to assign a single well-known
-# port number for both TCP and UDP; hence, most entries here have two entries
-# even if the protocol doesn't support UDP operations.
-# Updated from RFC 1700, ``Assigned Numbers'' (October 1994).  Not all ports
-# are included, only the more common ones.
-#
-# The latest IANA port assignments can be gotten from
-#       http://www.iana.org/assignments/port-numbers
-# The Well Known Ports are those from 0 through 1023.
-# The Registered Ports are those from 1024 through 49151
-# The Dynamic and/or Private Ports are those from 49152 through 65535
-#
-# Each line describes one service, and is of the form:
-#
-# service-name  port/protocol  [aliases ...]   [# comment]
-
-tcpmux          1/tcp                           # TCP port service multiplexer
-tcpmux          1/udp                           # TCP port service multiplexer
-rje             5/tcp                           # Remote Job Entry
-rje             5/udp                           # Remote Job Entry
-echo            7/tcp
-echo            7/udp
-discard         9/tcp           sink null
-discard         9/udp           sink null
-systat          11/tcp          users
-systat          11/udp          users
-[7m/etc/services[27m[K[Kdaytime         13/tcp
-:[K[K[?1l>[?1049l]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} head practice_copy
-CS3377
-Linus Fackler
-Spring 2022
-System progamming
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} tail practice_copy
-CS3377
-Linus Fackler
-Spring 2022
-System progamming
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} utility
-bash: utility: command not found
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} hostname utility
-hostname: you must be root to change the host name
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} hostname
-cslinux1.utdallas.edu
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} mv practice_copy practice_c
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} ls
-perl5  practice_c  public_html	typescript
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} grep "Spring" practice_c
-Spring 2022
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} vim days
-[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;33r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[33;1H"days" [New File][>c[2;1H[1m[34m~                                                                                                                               [3;1H~                                                                                                                               [4;1H~                                                                                                                               [5;1H~                                                                                                                               [6;1H~                                                                                                                               [7;1H~                                                                                                                               [8;1H~                                                                                                                               [9;1H~                                                                                                                               [10;1H~                                                                                                                               [11;1H~                                                                                                                               [12;1H~                                                                                                                               [13;1H~                                                                                                                               [14;1H~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [30;1H~                                                                                                                               [31;1H~                                                                                                                               [32;1H~                                                                                                                               [m[33;111H0,0-1[9CAll[1;1H[?12l[?25h[?25l[33;1H[1m-- INSERT --[m[33;13H[K[33;111H0,1[11CAll[1;1H[?12l[?25h[?25lM[33;111H1,2[1;2H[?12l[?25h[?25lo[33;113H3[1;3H[?12l[?25h[?25ln[33;113H4[1;4H[?12l[?25h[?25ld[33;113H5[1;5H[?12l[?25h[?25la[33;113H6[1;6H[?12l[?25h[?25ly[33;113H7[1;7H[?12l[?25h[?25l[2;1H[K[33;111H2,1[2;1H[?12l[?25h[?25lT[33;113H2[2;2H[?12l[?25h[?25lu[33;113H3[2;3H[?12l[?25h[?25le[33;113H4[2;4H[?12l[?25h[?25ls[33;113H5[2;5H[?12l[?25h[?25ld[33;113H6[2;6H[?12l[?25h[?25la[33;113H7[2;7H[?12l[?25h[?25ly[33;113H8[2;8H[?12l[?25h[?25lu[33;113H9[2;9H[?12l[?25h[?25l[2;8H[K[33;113H8[2;8H[?12l[?25h[?25l[3;1H[K[33;111H3,1[3;1H[?12l[?25h[?25lW[33;113H2[3;2H[?12l[?25h[?25le[33;113H3[3;3H[?12l[?25h[?25ld[33;113H4[3;4H[?12l[?25h[?25ln[33;113H5[3;5H[?12l[?25h[?25le[33;113H6[3;6H[?12l[?25h[?25ls[33;113H7[3;7H[?12l[?25h[?25ld[33;113H8[3;8H[?12l[?25h[?25la[33;113H9[3;9H[?12l[?25h[?25ly[33;113H10[3;10H[?12l[?25h[?25l[4;1H[K[33;111H4,1 [4;1H[?12l[?25h[?25lT[33;113H2[4;2H[?12l[?25h[?25lh[33;113H3[4;3H[?12l[?25h[?25lu[33;113H4[4;4H[?12l[?25h[?25lr[33;113H5[4;5H[?12l[?25h[?25ls[33;113H6[4;6H[?12l[?25h[?25ld[33;113H7[4;7H[?12l[?25h[?25la[33;113H8[4;8H[?12l[?25h[?25ly[33;113H9[4;9H[?12l[?25h[?25l[5;1H[K[33;111H5,1[5;1H[?12l[?25h[?25lF[33;113H2[5;2H[?12l[?25h[?25lr[33;113H3[5;3H[?12l[?25h[?25li[33;113H4[5;4H[?12l[?25h[?25ld[33;113H5[5;5H[?12l[?25h[?25la[33;113H6[5;6H[?12l[?25h[?25ly[33;113H7[5;7H[?12l[?25h[?25l[6;1H[K[33;111H6,1[6;1H[?12l[?25h[?25lS[33;113H2[6;2H[?12l[?25h[?25la[33;113H3[6;3H[?12l[?25h[?25lt[33;113H4[6;4H[?12l[?25h[?25lu[33;113H5[6;5H[?12l[?25h[?25lr[33;113H6[6;6H[?12l[?25h[?25ld[33;113H7[6;7H[?12l[?25h[?25la[33;113H8[6;8H[?12l[?25h[?25ly[33;113H9[6;9H[?12l[?25h[?25l[7;1H[K[33;111H7,1[7;1H[?12l[?25h[?25lS[33;113H2[7;2H[?12l[?25h[?25liu[33;113H4[7;4H[?12l[?25h[?25ln[33;113H5[7;5H[?12l[?25h[?25ld[33;113H6[7;6H[?12l[?25h[?25la[33;113H7[7;7H[?12l[?25h[?25l[7;6H[K[33;113H6[7;6H[?12l[?25h[?25l[7;5H[K[33;113H5[7;5H[?12l[?25h[?25l[7;4H[K[33;113H4[7;4H[?12l[?25h[?25l[7;3H[K[33;113H3[7;3H[?12l[?25h[?25l[7;2H[K[33;113H2[7;2H[?12l[?25h[?25lu[33;113H3[7;3H[?12l[?25h[?25ln[33;113H4[7;4H[?12l[?25h[?25ld[33;113H5[7;5H[?12l[?25h[?25la[33;113H6[7;6H[?12l[?25h[?25ly[33;113H7[7;7H[?12l[?25h[33;1H[K[7;6H[?25l[33;111H7,6[11CAll[7;6H[?12l[?25h[?25l[33;1H"days"[33;111H[K[33;8H[New] 7L, 57C written
-[?1l>[?12l[?25h[?1049l]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} cat days
-Monday
-Tuesday
-Wednesday
-Thursday
-Friday
-Saturday
-Sunday
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} sort days
-Friday
-Monday
-Saturday
-Sunday
-Thursday
-Tuesday
-Wednesday
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} file days
-days: ASCII text
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} file /etc
-/etc: directory
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} ls et/c[K[Kc/[K[K[K[K/etc
-\				fuse.conf		      login.defs.rpmnew			rc4.d
-1				fwupd			      logrotate.conf			rc5.d
-a2ps				gconf			      logrotate.d			rc6.d
-a2ps.cfg			gcrypt			      logwatch				rc.d
-a2ps-site.cfg			gdbinit			      lsb-release.d			rc.local
-abrt				gdbinit.d		      lsm				rdma
-acpi				gdm			      lvm				redhat-lsb
-adjtime				geoclue			      lynx.cfg				redhat-release
-akonadi				GeoIP.conf		      lynx.lss				request-key.conf
-aliases				ghostscript		      lynx-site.cfg			request-key.d
-aliases.db			gimp			      machine-id			resolv.conf
-aliases.rpmnew			glvnd			      magic				rpc
-alsa				gnome-vfs-2.0		      mailcap				rpm
-alternatives			gnupg			      mail.rc				rsyncd.conf
-anacrontab			GREP_COLORS		      makedumpfile.conf.sample		rsyslog.conf
-ant.conf			groff			      man_db.conf			rsyslog.d
-ant.d				group			      mate-settings-daemon		rwtab
-asound.conf			group-			      maven				rwtab.d
-at.deny				grub2.cfg		      mfs				samba
-audisp				grub.d			      mime.types			sane.d
-audit				gshadow			      mke2fs.conf			sasl2
-auto.direct			gshadow-		      modprobe.d			scl
-auto.direct.170106		gss			      modulefiles			screenrc
-autofs.conf			gssproxy		      modules-load.d			securetty
-autofs_ldap_auth.conf		hba.conf		      motd				security
-auto.master			hba.conf.010518-21_37_10.bak  motd_05-10-2016			selinux
-auto.master._before_ipa_client	hba.conf.010919-12_58_44.bak  motd.160525			services
-auto.master.d			hba.conf.013119-17_52_52.bak  motd.d				sestatus.conf
-auto.master.orig		hba.conf.020119-09_31_23.bak  mtab				setroubleshoot
-auto.misc			hba.conf.020419-06_18_42.bak  mtools.conf			setuptool.d
-auto.net			hba.conf.031218-10_35_58.bak  multipath				sgml
-auto.smb			hba.conf.050918-10_36_17.bak  my.cnf				shadow
-avahi				hba.conf.051018-11_34_42.bak  my.cnf.d				shadow-
-bash_completion.d		hba.conf.051319-13_47_57.bak  nanorc				shells
-bashrc				hba.conf.051719-14_42_48.bak  netconfig				shells.rpmnew
-binfmt.d			hba.conf.060418-15_45_59.bak  NetworkManager			skel
-bluetooth			hba.conf.060419-16_58_28.bak  networks				slp.conf
-bonobo-activation		hba.conf.061418-09_28_20.bak  nfs.conf				slp.spi
-brltty				hba.conf.081318-11_45_04.bak  nfsmount.conf			smartmontools
-brltty.conf			hba.conf.110718-16_59_33.bak  nscd.conf				snmp
-centos-release			hba.conf.121918-08_02_10.bak  nslcd.conf			sos.conf
-centos-release-upstream		highlight		      nsswitch.conf			sound
-certmonger			host.conf		      nsswitch.conf.bak			speech-dispatcher
-cgconfig.conf			hostname		      nsswitch.conf._before_ipa_client	ssh
-cgconfig.d			hosts			      nsswitch.conf.ipabkp		ssl
-cgrules.conf			hosts.allow		      nsswitch.conf.orig		sssd
-cgsnapshot_blacklist.conf	hosts.deny		      nsswitch.conf.rpmnew		statetab
-chkconfig.d			hp			      ntp				statetab.d
-chrony.conf			html2psrc		      ntp.conf				subgid
-chrony.conf.rpmnew		idmapd.conf		      numad.conf			subuid
-chrony.keys			idmapd.conf.ipabkp	      odbcinst.ini			subversion
-chrony.keys.rpmnew		ImageMagick-6		      oddjob				sudo.conf
-cifs-utils			init.d			      oddjobd.conf			sudoers
-cockpit				inittab			      oddjobd.conf.d			sudoers.d
-cron.d				inputrc			      omreg.cfg				sudoers.lecture
-cron.daily			ipa			      omreg.ini				sudoers.rpmnew
-cron.deny			iproute2		      openldap				sudo-ldap.conf
-cron.hourly			ipsec.conf		      openmpi-x86_64			sysconfig
-cron.monthly			ipsec.d			      openvpn				sysctl.conf
-crontab				ipsec.secrets		      openwsman				sysctl.conf.rpmnew
-cron.weekly			iscsi			      opt				sysctl.d
-crypttab			issue			      os-release			systemd
-csh.cshrc			issue.181018		      PackageKit			system-release
-csh.login			issue.d			      pam.d				system-release-cpe
-cups				issue.net		      papersize				target
-cupshelpers			issue.net.ORIG		      passwd				tcsd.conf
-dbus-1				issue.NEW		      passwd-				terminfo
-dconf				issue.ORIG		      passwd.161006			tmpfiles.d
-default				java			      pbm2ppa.conf			Trolltech.conf
-depmod.d			jvm			      pcp				trusted-key.key
-dhcp				jvm-commmon		      pcp.conf				tuned
-DIR_COLORS			jwhois.conf		      pcp.env				udev
-DIR_COLORS.256color		kde			      Pegasus				udisks2
-DIR_COLORS.lightbgcolor		kde4rc			      php.d				unbound
-dleyna-server-service.conf	kderc			      php.ini				updatedb.conf
-dnsmasq.conf			kdump.conf		      pinforc				UPower
-dnsmasq.d			kdump.conf.rpmnew	      pkcs11				vconsole.conf
-dracut.conf			kernel			      pki				vimrc
-dracut.conf.d			krb5.conf		      plymouth				virc
-e2fsck.conf			krb5.conf._bak		      pm				virtuoso
-edac				krb5.conf._before_ipa_client  pnm2ppa.conf			vmware-tools
-egl				krb5.conf.d		      polkit-1				vpnc
-elinks.conf			krb5.conf.ipabkp	      popt.d				wgetrc
-enscript.cfg			krb5.keytab		      portreserve			wpa_supplicant
-environment			ksmtuned.conf		      postfix				X11
-ethertypes			ksysguarddrc		      ppp				xdg
-exports				latrace.d		      prelink.conf			xinetd.conf
-exports.d			ld.so.cache		      prelink.conf.d			xinetd.d
-extlinux.conf			ld.so.conf		      printcap				xml
-fail2ban			ld.so.conf.d		      profile				xrdb
-favicon.png			libaudit.conf		      profile.d				yp.conf
-fcoe				libblockdev		      protocols				yum
-festival			libibverbs.d		      pulse				yum.conf
-filesystems			libnl			      purple				yum.repos.d
-filezilla			libpaper.d		      python				zlogin
-firefox				libreport		      qemu-ga				zlogout
-firewalld			libuser.conf		      qemu-kvm				zprofile
-flatpak				libvirt			      radvd.conf			zshenv
-fonts				lightdm			      rc0.d				zshrc
-foomatic			locale.conf		      rc1.d
-fprintd.conf			localtime		      rc2.d
-fstab				login.defs		      rc3.d
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} file egl
-egl: cannot open (No such file or directory)
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} file /etc/egl
-/etc/egl: directory
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} file /etc/egl[K[K[Kfavicon.png
-/etc/favicon.png: symbolic link to `/usr/share/icons/hicolor/16x16/apps/fedora-logo-icon.png'
-]2;cslinux1.utdallas.edu:/home/012/l/lx/lxf210001{cslinux1:~} exit
-exit
-
-Script done on Fri 28 Jan 2022 05:10:34 PM CST
