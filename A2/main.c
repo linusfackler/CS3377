@@ -5,7 +5,6 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include <iomanip>
-#include <iostream>
 
 #define LINESIZE 16
 
