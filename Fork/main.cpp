@@ -75,7 +75,15 @@ int main (int argc, char* argv[])
         close(pipeParentWriteChildReadfds[READ]);
         close(pipeParentReadChildWritefds[WRITE]);
 
-        
+        for (unsigned i = 0; i < noOfParentMessages2Send; i++)
+        {
+            printf("In Parent: Write to pipe getQuoteMessage sent \n"); //NEED
+            write(pipeParentWriteChildReadfds[WRITE], "Get Quote", sizeof()); //NEED
+
+            char ParentReadChildMessage[MAX_PIPE_MESSAGE_SIZE] = { 0 };
+            read(pipeParentReadChildWritefds[READ], ParentReadChildMessage); //NEED
+            printf("In Parent: Read from pipe pipeParentReadChildMessage "); //NEED
+        }
     }
 
 }
