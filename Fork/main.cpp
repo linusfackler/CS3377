@@ -36,3 +36,46 @@ void getQuotesArray(char *lines[], unsigned &noLines)
         noLines++;
     }
 }
+
+int main (int argc, char* argv[])
+{
+    if (argc != 2)
+    {
+        perror("\n\nWhere is the number argument, I will expire now...\n\n");
+        exit(EXIT_FAILURE);
+    }
+
+    int noOfParentMessages2Send = atoi(argv[1]);
+    char *lines[1000];
+    unsigned noLines;
+    srand(clock());
+    getQuotesArray(lines, noLines);
+
+    int pipeParentWriteChildReadfds[2], pipeParentReadChildWritefds[2];
+    int pipeReturnStatus;
+    int pid;
+
+    // create pipes
+    pipeReturnStatus = pipe(pipeParentWriteChildReadfds);
+    if (pipeReturnStatus == PIPE_ERROR)
+    {
+        printf("Unable to create pipe pipeParentWriteChildReadfds \n");
+        return EXIT_FAILURE;
+    }
+
+    printf("\n\n");
+
+    pid = fork();
+
+    if (pid != CHILD_PID)
+    {
+        // Parent process
+        
+        // Close the unwanted pipes
+        close(pipeParentWriteChildReadfds[READ]);
+        close(pipeParentReadChildWritefds[WRITE]);
+
+        
+    }
+
+}
