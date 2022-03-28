@@ -20,5 +20,19 @@ int const MAX_QUOTE_LINE_SIZE       = 1000;
 
 void getQuotesArray(char *lines[], unsigned &noLines)
 {
-    
+    FILE *inputFilePointer;
+    inputFilePointer = fopen(QUOTES_FILE_NAME, "r");
+    if (inputFilePointer == NULL)
+    {
+        perror("\n\nError opening file, I will expire now...\n\n");
+        exit(EXIT_FAILURE);
+    }
+
+    char input [MAX_QUOTE_LINE_SIZE];
+    int size = sizeof(input);
+    while (fgets(input, size, inputFilePointer) != NULL)
+    {
+        lines[noLines] = strdup(input);
+        noLines++;
+    }
 }
