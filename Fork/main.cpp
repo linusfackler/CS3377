@@ -77,13 +77,63 @@ int main (int argc, char* argv[])
 
         for (unsigned i = 0; i < noOfParentMessages2Send; i++)
         {
-            printf("In Parent: Write to pipe getQuoteMessage sent \n"); //NEED
-            write(pipeParentWriteChildReadfds[WRITE], "Get Quote", sizeof()); //NEED
+            printf("In Parent: Write to pipe getQuoteMessage sent \nMessage:\n%s\n\n", "Get Quote");
+            write(pipeParentWriteChildReadfds[WRITE], "Get Quote", sizeof("Get Quote"));
 
             char ParentReadChildMessage[MAX_PIPE_MESSAGE_SIZE] = { 0 };
-            read(pipeParentReadChildWritefds[READ], ParentReadChildMessage); //NEED
-            printf("In Parent: Read from pipe pipeParentReadChildMessage "); //NEED
+            read(pipeParentReadChildWritefds[READ], ParentReadChildMessage sizeof(ParentReadChildMessage));
+            printf("In Parent: Read from pipe pipeParentReadChildMessage read\nMessage:\n%s\n\n", ParentReadChildMessage);
         }
-    }
 
+        write(pipeParentWriteChildReadfds[WRITE], "Exit", sizeof("Exit"));
+        printf("In Parent: Write to pipe ParentWriteChildExitMessage sent\nMessage:\n%s\n\n", "Exit");
+
+        close(pipeParentWriteChildReadfds[WRITE]);
+        close(pipeParentReadChildWritefds[READ]);
+
+        printf("\nParent done\n");
+    }
+    else
+    {
+        //child process
+
+        // Close the unwanted pipes
+        close(pipeParentWriteChildReadfds[WRITE]);
+        close(pipeParentReadChildWritefds[READ]);
+
+        time_t t;
+        srand((unsigned)time(&t));
+        
+        do
+        {
+            char receivedMessage[MAX_PIPE_MESSAGE_SIZE] = {0};
+
+            read(pipeParentWriteChildReadfds[READ], receivedMessage, sizeof(receivedMessage));
+            printf("In Child : Read from pipe pipeParentWriteChildMessage read\nMessage:\n%s\n\n", receivedMessage);
+
+            // check message
+            char *indexPointer;
+            indexPointer = strstr(receivedMessage, "Exit");
+
+            if (indexPointer != NULL)
+                break;  // exit message found
+
+            indexPointer = strstr(receivedMessage, "Get Quote");
+            if (indexPointer != NULL)
+            {
+                // Get Quote message found
+
+                // get random quote line choice 0... < noLines
+                int randomLineChoice = (rand() % noLines);
+
+                char quoteMessage[1000] = {0};
+            }
+        } while (true);
+
+        close(pipeParentWriteChildReadfds[READ]);
+        close(pipeParentReadChildWritefds[WRITE]);
+
+        printf("Child Done %s \n\n");        
+    }
+    return EXIT_SUCCESS;
 }
