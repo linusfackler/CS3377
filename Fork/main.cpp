@@ -63,6 +63,13 @@ int main (int argc, char* argv[])
         return EXIT_FAILURE;
     }
 
+    pipeReturnStatus = pipe(pipeParentReadChildWritefds);
+    if (pipeReturnStatus == PIPE_ERROR)
+    {
+        printf("Unable to create pipeParentReadChildWritefds \n");
+        return EXIT_FAILURE;
+    }
+
     printf("\n\n");
 
     pid = fork();
@@ -81,7 +88,7 @@ int main (int argc, char* argv[])
             write(pipeParentWriteChildReadfds[WRITE], "Get Quote", sizeof("Get Quote"));
 
             char ParentReadChildMessage[MAX_PIPE_MESSAGE_SIZE] = { 0 };
-            read(pipeParentReadChildWritefds[READ], ParentReadChildMessage sizeof(ParentReadChildMessage));
+            read(pipeParentReadChildWritefds[READ], ParentReadChildMessage, sizeof(ParentReadChildMessage));
             printf("In Parent: Read from pipe pipeParentReadChildMessage read\nMessage:\n%s\n\n", ParentReadChildMessage);
         }
 
@@ -127,6 +134,20 @@ int main (int argc, char* argv[])
                 int randomLineChoice = (rand() % noLines);
 
                 char quoteMessage[1000] = {0};
+                unsigned size = strlen(lines[randomLineChoice]);
+                for (unsigned i = 0; i < size; i++)
+                    quoteMessage[i] = *(lines[randomLineChoice] + i);
+                
+                printf("In Child : Write to pipe pipeParentReadChildMessage  sent\nMessage:\n%s\n\n", quoteMessage);
+                write(pipeParentReadChildWritefds[WRITE], quoteMessage, sizeof(quoteMessage));
+            }
+
+            else
+            {
+                // Invalid message
+                printf("In Child : Invalid message received:\n%s\n\n", receivedMessage);
+                printf("In Child : Write to pipe pipeParentReadChildMessage  sent\nMessage:%s\n\n", receivedMessage);
+                write(pipeParentReadChildWritefds[WRITE], receivedMessage, sizeof(receivedMessage));
             }
         } while (true);
 
