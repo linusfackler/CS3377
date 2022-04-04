@@ -38,7 +38,13 @@ int main(int argc, char* argv[])
 {
     if (argc != 3)
     {
-
+        cout << endl << endl <<
+            "Wrong arguments" << endl
+                "Usage: " << endl <<
+                    "calculate < sum | average | greatest | least > filenae.txt" << endl <<
+                        "Example:" << endl << 
+                            "calculate sum filerandom.txt" << endl << endl;
+        exit(EXIT_FAILURE)
     }
 
     cerr << endl << argv[0] << " " << argv[1] << " " << argv[2] << endl;
