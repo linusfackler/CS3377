@@ -1,8 +1,15 @@
+// Linus Fackler
+// LXF210001
+// CS3377.501 Systems Programming in UNIX and Other Environments
+// Dr. Dollinger
+//
+// This assignment designs forks to create multiple child processes.
+// Each will use information sent by the parent over a pipe to execute
+// the except(). This will overlay each child using execvp() to calculate.
+
+#include <iostream>
 #include <string>
 #include <fstream>
-#include <iostream>
-#include <stdint.h>
-
 #include <stdlib.h>
 #include <string.h>
 #include <cstdlib>
@@ -24,19 +31,19 @@ int const EXECVP_FAILED = -1;
 
 
 void CreateArg1FileWithArg2RandomNumbersArg3RandomRange
-     (string randomFileNameStr, unsigned noRandomNumbersUns, unsigned  randomRange)
-{
+     (string randomFileNameStr, unsigned noRandomNumbersUns, unsigned  randomRange) 
+     {
 
     ofstream outfileStream (randomFileNameStr);
 
-    if (outfileStream.fail())
+    if (outfileStream.fail()) 
     {
         cerr<<"Oh my Goodness, Error opening file Randon Numbers File : " << randomFileNameStr << endl <<
               "I will expire now..." << endl<<endl;
         exit(EXIT_FAILURE);
     }
 
-    // seed the random number generator
+    //seed the random number generator
     time_t t; srand((unsigned)time(&t));
 
 
@@ -46,10 +53,9 @@ void CreateArg1FileWithArg2RandomNumbersArg3RandomRange
     outfileStream.close();
     }
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
 
-    if (argc != 4)
+    if (argc != 4) 
     {
         cerr<<endl<<endl<<
             "Wrong arguments"<<endl<<
@@ -77,12 +83,10 @@ int main(int argc, char* argv[])
     string messages[] = {"sum", "average", "greatest", "least"};
     int noOfMessages = sizeof(messages) / sizeof(messages[0]);
     
-    for (int childProcessNo = 0; childProcessNo < noOfMessages; ++childProcessNo)
+    for (int childProcessNo = 0; childProcessNo < noOfMessages; ++childProcessNo) 
     {
-
         pipeReturnStatus = pipe(pipeParentWriteChildReadfds);
-        if (pipeReturnStatus == PIPE_ERROR)
-        {
+        if (pipeReturnStatus == PIPE_ERROR) {
             cerr << "Unable to create pipe pipeParentWriteChildReadfds" << endl;
             return EXIT_FAILURE;
         }
@@ -97,7 +101,7 @@ int main(int argc, char* argv[])
 
         if (forkpid != CHILD_PID)
         {
-            // parent
+            //parent
             close(pipeParentWriteChildReadfds[READ]);
 
             cout << "Parent pid : " << getpid() << " to Child Process No : " 
@@ -111,7 +115,7 @@ int main(int argc, char* argv[])
         }
         else
         { 
-            // child
+            //child code
             close(pipeParentWriteChildReadfds[WRITE]);
 
             char pipeReadMessage[MAX_PIPE_MESSAGE_SIZE] = {0};
@@ -136,8 +140,7 @@ int main(int argc, char* argv[])
 
             int statusCode = execvp(arglist[0], arglist);
 
-            if (statusCode == EXECVP_FAILED)
-            {
+            if (statusCode == EXECVP_FAILED) {
                 cout << "Child pid : " << getpid() << " Child Process No : " << childProcessNo << endl <<
                     "execvp(" << arglist[0] << ", ./calculate, " << randomFileNameStr.c_str() << ", NULL)" << endl;
                 cout << "****** Failed *******" << endl;
@@ -156,7 +159,7 @@ int main(int argc, char* argv[])
 
     cout << "Parent pid : " << getpid() << " Use execvp() cat to display answer files: " << endl;
 
-    for (int childProcessNo = 0; childProcessNo < noOfMessages; ++childProcessNo)
+    for (int childProcessNo = 0; childProcessNo < noOfMessages; ++childProcessNo) 
     {
 
         pid_t forkpid = fork();
@@ -167,10 +170,8 @@ int main(int argc, char* argv[])
             exit(EXIT_FAILURE);
         }
 
-        if (forkpid == CHILD_PID)
-        {
-            //child code
-            
+        if (forkpid == CHILD_PID) 
+        {            
             string answerFileName = "answer"; answerFileName += messages[childProcessNo]; answerFileName += ".txt";
 
             char* arglist[] = { (char*)"cat", (char*)answerFileName.c_str(), NULL };
