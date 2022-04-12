@@ -45,5 +45,8 @@ int main(int argc, char* argv[])
 
     char randomWordAry[READ_MAX_LEN] = { 0 };
     read(swr_crd_np_fd, randomWordAry, READ_MAX_LEN);
+    string randomword_str(randomWordAry);
+
+    char srd_cwr_np_ary[READ_MAX_LEN] = { 0 };
 
 }
