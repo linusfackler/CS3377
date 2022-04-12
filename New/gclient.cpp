@@ -55,4 +55,47 @@ int main(int argc, char* argv[])
     chmod (srd_cwr_np_str.c_str(), 0622);
     int    srd_cwr_np_fd = open(srd_cwr_np_str.c_str(), O_WRONLY);
 
+    int noOfTries = 0;
+
+    cout << endl << endl << "Game Start" << endl <<
+        "You have " << NO_OF_LETTER_GUESS_MAX << " letter guesses to win" << endl << endl;
+
+    do
+    {
+        char guessWordAry[READ_MAX_LEN] = { 0 };
+        read(swr_crd_np_fd, guessWordAry, READ_MAX_LEN);
+        string guessword_str(guessWordAry);
+
+        // Determine if done:
+        if (guessword_str == randomword_str)
+        {
+            cout << endl << endl << "You Win!" << endl << endl;
+            break;
+        }
+
+        if (noOfTries > NO_OF_LETTER_GUESS_MAX)
+        {
+            cout << endl << endl << "Out of tries : " << noOfTries - 1 << " allowed"
+                << endl << "The word is: " << randomword_str << endl << endl;
+            break;
+        }
+
+        cout << endl;
+        cout << "Client : " << clientno_str << endl <<
+            "No of tries : " << noOfTries << endl <<
+            "(Guess) Enter a letter in the word : " << guessword_str << endl;
+        cout << endl;
+
+        char letterGuess_char = ' ';
+        cin >> letterGuess_char;
+        string letterGuess_str = " ";
+        letterGuess_str[0] = letterGuess_char;
+
+        write(srd_cwr_np_fd, letterGuess_str.c_str(), letterGuess_str.size() + 1);
+
+        noOfTries++;
+
+    } while (true);
+    
+
 }
