@@ -48,5 +48,11 @@ int main(int argc, char* argv[])
     string randomword_str(randomWordAry);
 
     char srd_cwr_np_ary[READ_MAX_LEN] = { 0 };
+    read(swr_crd_np_fd, srd_cwr_np_ary, READ_MAX_LEN);
+    string srd_cwr_np_str(srd_cwr_np_ary);
+
+    mkfifo(srd_cwr_np_str.c_str(), 0600);
+    chmod (srd_cwr_np_str.c_str(), 0622);
+    int    srd_cwr_np_fd = open(srd_cwr_np_str.c_str(), O_WRONLY);
 
 }
