@@ -41,5 +41,9 @@ int main(int argc, char* argv[])
 
     char clientno_ary[READ_MAX_LEN] = { 0 };
     read(swr_crd_np_fd, clientno_ary, READ_MAX_LEN);
+    string clientno_str(clientno_ary);
+
+    char randomWordAry[READ_MAX_LEN] = { 0 };
+    read(swr_crd_np_fd, randomWordAry, READ_MAX_LEN);
 
 }
