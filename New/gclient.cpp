@@ -97,5 +97,13 @@ int main(int argc, char* argv[])
 
     } while (true);
     
+    close(srd_cwr_req_np_fd);
+    close(swr_crd_np_fd);
+    close(srd_cwr_np_fd);
 
+    unlink(srd_cwr_req_np_str.c_str());
+    unlink(swr_crd_np_str.c_str());
+    unlink(srd_cwr_np_str.c_str());
+    
+    exit(EXIT_SUCCESS);
 }
