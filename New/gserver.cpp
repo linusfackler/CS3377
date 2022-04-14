@@ -44,7 +44,7 @@ int main(int argc, char* argv[])
         chmod (srd_cwr_req_np_str.c_str(), 0622);
         int    srd_cwr_req_np_fd  = open(srd_cwr_req_np_str.c_str(), O_RDONLY);
 
-        char srd_crd_np_ary[READ_MAX_LEN] = { 0 };
+        char swr_crd_np_ary[READ_MAX_LEN] = { 0 };
         read(srd_cwr_req_np_fd, swr_crd_np_ary, READ_MAX_LEN);
         string swr_crd_np_str(swr_crd_np_ary);
 
@@ -68,7 +68,7 @@ int main(int argc, char* argv[])
             stringstream ss;
             ss << clientcount;
             string str = ss.str();
-            string clientcount_str == ss.str();
+            string clientcount_str = ss.str();
             write(swr_crd_np_fd, clientcount_str.c_str(), clientcount_str.size() + 1);
 
             sleep(1);
