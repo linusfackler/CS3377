@@ -22,12 +22,12 @@ int main(int argc, char* argv[])
         exit(EXIT_FAILURE);
     }
 
-    string srd_cwr_req_np_str = "./tmp/srd_cwr_req_np";
+    string srd_cwr_req_np_str = "./srd_cwr_req_np";
     mkfifo(srd_cwr_req_np_str.c_str(), 0600);
     chmod (srd_cwr_req_np_str.c_str(), 0622);
     int    srd_cwr_req_np_fd = open(srd_cwr_req_np_str.c_str(), O_WRONLY);
 
-    string swr_crd_np_str = "./tmp/swr_crd_np-";
+    string swr_crd_np_str = "./swr_crd_np-";
     int i = getpid();
     string s;
     stringstream out;
