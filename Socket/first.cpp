@@ -13,3 +13,8 @@
 
 using namespace std;
 
+const int MESSAGE_MAX_SIZE = 1024;
+const int ERROR = -1;
+const int SOCK_PORT = 8888;
+const int LISTEN_QUEUE_SIZE = 3;
+const int HIGHEST_NO = 100;
