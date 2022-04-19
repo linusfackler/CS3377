@@ -18,3 +18,9 @@ const int ERROR = -1;
 const int SOCK_PORT = 8888;
 const int LISTEN_QUEUE_SIZE = 3;
 const int HIGHEST_NO = 100;
+
+int main(int argc, char* argv[])
+{
+    int    socket_desc, client_sock, read_size, addrsize, status;
+    struct sockaddr_in server, client;
+}
