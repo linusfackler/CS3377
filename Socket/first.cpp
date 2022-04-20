@@ -26,5 +26,14 @@ int main(int argc, char* argv[])
 
     //Create socket
     socket_desc = socket(AF_INET, SOCK_STREAM, 0);
-    
+    if (socket_desc == ERROR)
+    {
+        cerr << "Failure: Create socket" << endl;
+        exit (EXIT_FAILURE);
+    }
+
+    //Setup the sockaddr_in structure
+    server.sin_family       = AF_INET;
+    server.sin_addr.s_addr  = INADDR_ANY;
+    server.sin_port         = htons(SOCK_PORT);
 }
