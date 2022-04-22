@@ -76,35 +76,42 @@ int main(int argc, char* argv[])
 
         guessnostr = clientGuessNoMessage;
         cout << guessnostr << endl;
-        if (guessnostr == "0"){
-            break;
+        // check if tries done
+        if (guessnostr.find("Random Number") != std::string::npos)
+        {
+            write(client_sock, randomnostr.c_str(), randomnostr.size() + 1);
         }
-        else if (read_size > 0){
-            string clientGuessNoMessagestr(clientGuessNoMessage);
-	    guessno = stoi(clientGuessNoMessage);
-           // guessno = stoi(clientGuessNoMessage);
-            guessnostr = clientGuessNoMessage;
-            if (randomno == guessno){
-                playresultstr = "You Win !! \n The number is : " + randomnostr;
-            }
-            else if (randomno > guessno){
-                playresultstr = "The number is greater than: " + guessnostr;
-            }
-            else if (randomno < guessno){
-                playresultstr = "The number is less than : " + guessnostr;
-            }
 
-            write(client_sock, playresultstr.c_str(), playresultstr.size() + 1);
-        }
-        else if (read_size == 0){
-            cout << "Client disconnected" << endl;
-            fflush(stdout);
-            break;
-        }
-        else if (read_size == ERR){
-            cout << "Failure: receive" << endl;
-            exit(EXIT_FAILURE);
-        }
-    } while (/* condition */);
-    
+        else
+        {
+            if (read_size > 0)
+            {
+                string clientGuessNoMessagestr(clientGuessNoMessage);
+	            guessno     = stoi(clientGuessNoMessage);
+                guessnostr  = clientGuessNoMessage;
+
+                if (randomno == guessno)
+                    playresultstr = "You Win !! /n The number is : " + randomnostr;
+                else if (randomno > guessno)
+                    playresultstr = "The number is greater than : "  + guessnostr;
+                else if (randomno < guessno)
+                    playresultstr = "The number is less than : "     + guessnostr;
+
+                write(client_sock, playresultstr.c_str(), playresultstr.size() + 1);
+            }
+            else if (read_size == 0)
+            {
+                cout << "Client disconnected" << endl;
+                fflush(stdout);
+                break;
+            }
+            
+            else if (read_size == ERR)
+            {
+                cout << "Failure: receive" << endl;
+                exit(EXIT_FAILURE);
+            }
+        } 
+    } while (true);
+    exit(EXIT_SUCCESS);
 }
