@@ -23,4 +23,69 @@ int main(int argc, char* argv[])
     int         socketServerId, status;
     sockaddr_in server;
     string      messageStr;
+
+    //Create socket
+    socketServerId = socket(AF_INET, SOCK_STREAM, 0);
+    if (socketServerId == ERROR)
+    {
+        cerr << "Failure: Create Socket" << endl;
+        exit(EXIT_FAILURE);
+    }
+
+    server.sin_addr.s_addr = inet_addr(LOCAL_HOST_ADDRESS.c_str());
+    server.sin_family      = AF_INET;
+    server.sin_port        = htons(SOCK_PORT);
+
+    //Connect to remote server
+    status = connect(socket_desc, (struct sockaddr *)&server, sizeof(server));
+    if (status == ERROR){
+        perror("Failure: connect failed. Error");
+        exit(EXIT_FAILURE);
+    }
+
+    cout << endl << endl << "Try to guess a number between 1 and " << MAX_GUESS_LIMIT << endl << endl;
+    int noOfTries = 0;
+    int guessNo;
+
+    do {
+        cout << "Current Try Number: " << ++noOfTries << endl;
+        cout << "Enter number guess: " << endl << endl;
+        cin >> guessNo;
+
+        stringstream gnoss;
+        gnoss << guessNo;
+        string guessNoStr = gnoss.str();
+
+        status = write(socket_desc, guessNoStr.c_str(), guessNoStr.size() + 1);
+        if (status == ERROR){
+            cout << "Failure: Client Send failed" << endl;
+            exit(EXIT_FAILURE);
+        }
+
+        if (messageStr == "e"){
+            break;
+        }
+        char recvmessage[MESSAGE_MAX_SIZE] = {0};
+        status = read(socket_desc, recvmessage, MESSAGE_MAX_SIZE);
+
+        if (status == ERROR){
+            cout << "Failure: recv failed" << endl;
+            exit(EXIT_FAILURE);
+        }
+
+        string recvmessageStr = recvmessage;
+        cout << endl << "Server reply :" << endl << endl << recvmessageStr << endl << endl;
+
+        if (recvmessageStr.find("Win") != string::npos){
+            break;
+        }
+        if (noOfTries == MAX_NO_TRIES) {
+            cout << endl << "The maximum number of tries " << MAX_NO_TRIES << " is done." << endl;
+            cout << "Game is over." << endl << endl;
+            break;
+        }
+    } while (true);
+
+    close(socket_desc);
+    exit(EXIT_SUCCESS);
 }
