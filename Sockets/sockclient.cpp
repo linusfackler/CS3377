@@ -37,8 +37,9 @@ int main(int argc, char* argv[])
     server.sin_port        = htons(SOCK_PORT);
 
     //Connect to remote server
-    status = connect(socket_desc, (struct sockaddr *)&server, sizeof(server));
-    if (status == ERROR){
+    status = connect(socketServerId, (struct sockaddr*) &server, sizeof(server));
+    if (status == ERROR)
+    {
         perror("Failure: connect failed. Error");
         exit(EXIT_FAILURE);
     }
@@ -47,45 +48,65 @@ int main(int argc, char* argv[])
     int noOfTries = 0;
     int guessNo;
 
-    do {
-        cout << "Current Try Number: " << ++noOfTries << endl;
-        cout << "Enter number guess: " << endl << endl;
+    //keep communicating with server
+    do
+    {
+        cout << "Current Try Number : " << ++noOfTries << endl;
+        cout << "Enter number guess : " << endl << endl;
         cin >> guessNo;
 
         stringstream gnoss;
         gnoss << guessNo;
         string guessNoStr = gnoss.str();
 
-        status = write(socket_desc, guessNoStr.c_str(), guessNoStr.size() + 1);
-        if (status == ERROR){
-            cout << "Failure: Client Send failed" << endl;
+        status = write(socketServerId, guessNoStr.c_str(), guessNoStr.size() + 1);
+
+        if (status == ERROR)
+        {
+            cout << "Failure: Client Write failed" << endl;
             exit(EXIT_FAILURE);
         }
 
-        if (messageStr == "e"){
-            break;
-        }
-        char recvmessage[MESSAGE_MAX_SIZE] = {0};
-        status = read(socket_desc, recvmessage, MESSAGE_MAX_SIZE);
+        char receiveMessage[MESSAGE_MAX_SIZE] = {0};
+        status = read(socketServerId, receiveMessage, MESSAGE_MAX_SIZE);
 
-        if (status == ERROR){
-            cout << "Failure: recv failed" << endl;
+        if (status == ERROR)
+        {
+            cout << "Failure: read failed" << endl;
             exit(EXIT_FAILURE);
         }
 
-        string recvmessageStr = recvmessage;
-        cout << endl << "Server reply :" << endl << endl << recvmessageStr << endl << endl;
+        string receiveMessageStr = receiveMessage;
+        cout << endl << "Server reply :" << endl << endl << receiveMessageStr << endl << endl;
 
-        if (recvmessageStr.find("Win") != string::npos){
+        if (receiveMessageStr.find("Win") != string::npos)
             break;
-        }
+
         if (noOfTries == MAX_NO_TRIES) {
             cout << endl << "The maximum number of tries " << MAX_NO_TRIES << " is done." << endl;
-            cout << "Game is over." << endl << endl;
-            break;
+            status = write(socketServerId, "Send Random Number", sizeof("Send Random Number")+1);
+            if(status = ERROR)
+            {
+                cout << "Failure: Client Write failed" << endl;
+                exit(EXIT_FAILURE);
+            }
+
+            char randomNoMessage[MESSAGE_MAX_SIZE];
+            status = read(socketServerId, randomNoMessage, MESSAGE_MAX_SIZE);
+            if (status == ERROR)
+            {
+                cout << "Failur: read failed" << endl;
+                exit(EXIT_FAILURE);
+            }
+            int randomno = stoi(randomNoMessage);
+
+            cout << "The random number is : " << randomno << endl << endl;
+            cout << "Game is over " << endl << endl;
+            break;            
         }
     } while (true);
 
-    close(socket_desc);
+    close(socketServerId);
+    
     exit(EXIT_SUCCESS);
 }
