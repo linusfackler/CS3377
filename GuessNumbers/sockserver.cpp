@@ -17,7 +17,7 @@ const int MESSAGE_MAX_SIZE = 1024;
 const int ERROR = -1;
 const int SOCK_PORT = 6969;
 const int LISTEN_QUEUE_SIZE = 3;
-const int HIGHEST_NO = 100;
+const int HIGHEST_NO = 50000;
 
 int main(int argc, char* argv[])
 {

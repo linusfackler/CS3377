@@ -16,7 +16,7 @@ const int    SOCK_PORT   = 6969;
 const string LOCAL_HOST_ADDRESS = "127.0.0.1";
 
 const int MAX_GUESS_LIMIT   = 100;
-const int MAX_NO_TRIES      = 12;
+const int MAX_NO_TRIES      = 20;
 
 int main(int argc, char* argv[])
 {
