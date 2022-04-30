@@ -12,7 +12,8 @@ pthread_mutex_t lock;
 
 static unsigned totalLineCount;
 
-void getLyricLinesFromFileToVector (string lyricsFilenameStr, vector<string>& lyricLinesVector, unsigned& noOfLyricLines) {
+void getLyricLinesFromFileToVector (string lyricsFilenameStr, vector<string>& lyricLinesVector, unsigned& noOfLyricLines)
+{
     ifstream fileLyricsStream(lyricsFilenameStr);
     if (fileLyricsStream.fail()) {
         cerr << "File " << lyricsFilenameStr << " could not be opened!" << endl;
@@ -27,13 +28,15 @@ void getLyricLinesFromFileToVector (string lyricsFilenameStr, vector<string>& ly
     noOfLyricLines = lyricLinesVector.size();
 }
 
-struct SingLinesThreadInfoStruct {
+struct SingLinesThreadInfoStruct
+{
     unsigned* singerNoIdPtr;
     vector<string> lyricLinesVector;
     unsigned noOfLyricLines;
 };
 
-void* SingLinesThread (void* singLinesThreadInfoStructPtr) {
+void* SingLinesThread (void* singLinesThreadInfoStructPtr)
+{
     SingLinesThreadInfoStruct* threadInfoPtr = (SingLinesThreadInfoStruct*)singLinesThreadInfoStructPtr;
 
     unsigned* singersNoIdPtr = threadInfoPtr->singerNoIdPtr;
@@ -56,7 +59,8 @@ void* SingLinesThread (void* singLinesThreadInfoStructPtr) {
     pthread_exit(NULL);
 }
 
-int main (int argc, char* argv[]) {
+int main (int argc, char* argv[])
+{
     if (argc != 3) {
         cerr << endl << "usage: " << endl << endl;
         cerr << endl << "singers <lyrics filename.txt> <number of singers>" << endl << endl;
@@ -89,7 +93,8 @@ int main (int argc, char* argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    for (unsigned singerNo = 0; singerNo < noOfSingers; ++singerNo) {
+    for (unsigned singerNo = 0; singerNo < noOfSingers; ++singerNo)
+    {
         unsigned *singerNoIdPtr = new unsigned;
         *singerNoIdPtr = singerNo + 1;
 
@@ -108,7 +113,8 @@ int main (int argc, char* argv[]) {
         }
     }
 
-    for (int singerNo = 0; singerNo < noOfSingers; ++singerNo) {
+    for (int singerNo = 0; singerNo < noOfSingers; ++singerNo)
+    {
         pthread_join(singersThreadIdPtr[singerNo], NULL);
     }
 
