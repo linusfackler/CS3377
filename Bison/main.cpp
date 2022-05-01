@@ -84,6 +84,5 @@ int main(int argc, char** argv)
     // prints number of patterns to output file
 
     outfile.close();
-
     return EXIT_SUCCESS;
 }
