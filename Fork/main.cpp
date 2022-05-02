@@ -100,6 +100,7 @@ int main (int argc, char* argv[])
 
         printf("\nParent done\n");
     }
+    
     else
     {
         //child process
