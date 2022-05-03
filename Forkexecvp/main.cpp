@@ -30,9 +30,8 @@ int const MAX_PIPE_MESSAGE_SIZE = 1000;
 int const EXECVP_FAILED = -1;
 
 
-void CreateArg1FileWithArg2RandomNumbersArg3RandomRange
-     (string randomFileNameStr, unsigned noRandomNumbersUns, unsigned  randomRange) 
-     {
+void CreateArg1FileWithArg2RandomNumbersArg3RandomRange (string randomFileNameStr, unsigned noRandomNumbersUns, unsigned  randomRange) 
+{
 
     ofstream outfileStream (randomFileNameStr);
 
@@ -51,10 +50,10 @@ void CreateArg1FileWithArg2RandomNumbersArg3RandomRange
         outfileStream << ( ( rand() % randomRange) + 1 ) << endl;
 
     outfileStream.close();
-    }
+}
 
-int main(int argc, char* argv[]) {
-
+int main(int argc, char* argv[])
+{
     if (argc != 4) 
     {
         cerr<<endl<<endl<<
