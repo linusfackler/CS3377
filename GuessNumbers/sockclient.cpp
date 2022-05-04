@@ -4,6 +4,8 @@
 // Dr. Dollinger
 //
 // This program lets the user guess a number between 0 and 100
+//
+// This is the client for the socket
 
 #include <string>
 #include <iostream>
