@@ -1,3 +1,10 @@
+// Linus Fackler
+// LXF210001
+// CS3377.501 Systems Programming in UNIX and Other Environments
+// Dr. Dollinger
+//
+// This assignment designs counts the number of diagonal entries
+
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
