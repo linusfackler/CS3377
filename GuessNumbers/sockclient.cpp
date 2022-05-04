@@ -1,4 +1,9 @@
-// number guess client
+// Linus Fackler
+// LXF210001
+// CS3377.501 Systems Programming in UNIX and Other Environments
+// Dr. Dollinger
+//
+// This program lets the user guess a number between 0 and 100
 
 #include <string>
 #include <iostream>
