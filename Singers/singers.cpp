@@ -3,7 +3,8 @@
 // CS3377.501 Systems Programming in UNIX and Other Environments
 // Dr. Dollinger
 //
-// This program prints out lyrics of a song
+// This program prints out lyrics of a song using threads
+// 
 
 #include <iostream>
 #include <iomanip>
