@@ -55,7 +55,8 @@ void* SingLinesThread (void* singLinesThreadInfoStructPtr)
     cout << "start thread " << *singersNoIdPtr << endl;
     pthread_mutex_unlock(&lock);
 
-    for (unsigned lyricLineNo = 0; lyricLineNo < noOfLyricLines; lyricLineNo++) {
+    for (unsigned lyricLineNo = 0; lyricLineNo < noOfLyricLines; lyricLineNo++)
+    {
         pthread_mutex_lock(&lock);
         cout << setw(3) << *singersNoIdPtr << ": " << setw(3) << lyricLineNo + 1 <<  " > " << lyricLinesVector[lyricLineNo] << endl;
         ++totalLineCount;
@@ -96,7 +97,8 @@ int main (int argc, char* argv[])
     singersNoIdPtr = new unsigned [noOfSingers];
     singLinesThreadInfoStructPtr = new SingLinesThreadInfoStruct[noOfSingers];
 
-    if (pthread_mutex_init(&lock, NULL) != 0) {
+    if (pthread_mutex_init(&lock, NULL) != 0)
+    {
         cerr << "mutex init failed " << endl;
         exit(EXIT_FAILURE);
     }
